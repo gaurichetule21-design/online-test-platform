@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Taking a test — Slate</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <div class="brand"><span class="brand-mark"></span><span id="attempt-title">Loading test…</span></div>
+    <div class="cluster">
+      <span class="text-faint" style="font-size:13px;">Time left</span>
+      <span class="mono" id="timer" style="font-size:18px; color:var(--accent);">--:--</span>
+    </div>
+  </div>
+</nav>
+
+<main class="container container--narrow" style="padding-top:48px; padding-bottom:80px;">
+
+  <div class="bubble-strip" id="bubble-strip" style="margin-bottom:32px; justify-content:center;"></div>
+
+  <div class="card card-pad" id="question-stage" style="padding:32px; min-height:220px;"></div>
+
+  <div class="spread" style="margin-top:24px;">
+    <button type="button" id="prev-btn" class="btn btn-secondary">← Previous</button>
+    <div class="cluster">
+      <button type="button" id="next-btn" class="btn btn-primary">Next →</button>
+      <button type="button" id="submit-btn" class="btn btn-primary" hidden>Submit test</button>
+    </div>
+  </div>
+
+</main>
+
+<script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard — Slate</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="brand"><span class="brand-mark"></span>SLATE</a>
+    <div class="nav-links">
+      <a href="index.html">Log out</a>
+    </div>
+  </div>
+</nav>
+
+<main class="container" id="dashboard-root" style="padding-top:48px; padding-bottom:64px;">
+
+  <div class="spread" style="margin-bottom:32px; align-items:flex-start;">
+    <div>
+      <span class="eyebrow">Dashboard</span>
+      <h1 style="font-size:28px;">Welcome back</h1>
+    </div>
+    <div class="cluster">
+      <span class="text-faint" style="font-size:13px;">Viewing as</span>
+      <button type="button" class="btn btn-secondary btn-sm" data-view-switch="student">Student</button>
+      <button type="button" class="btn btn-secondary btn-sm" data-view-switch="instructor">Instructor</button>
+    </div>
+  </div>
+
+  <!-- INSTRUCTOR VIEW -->
+  <section id="instructor-view" hidden>
+    <div class="grid-3" style="margin-bottom:32px;">
+      <div class="card card-pad">
+        <span class="text-faint" style="font-size:12px;">Tests created</span>
+        <h2 class="mono" id="stat-total-tests" style="font-size:28px; margin:4px 0 0;">—</h2>
+      </div>
+      <div class="card card-pad">
+        <span class="text-faint" style="font-size:12px;">Total attempts</span>
+        <h2 class="mono" id="stat-total-attempts" style="font-size:28px; margin:4px 0 0;">—</h2>
+      </div>
+      <div class="card card-pad">
+        <span class="text-faint" style="font-size:12px;">Average score</span>
+        <h2 class="mono" id="stat-avg-score" style="font-size:28px; margin:4px 0 0; color:var(--accent);">—</h2>
+      </div>
+    </div>
+
+    <div class="spread" style="margin-bottom:16px;">
+      <h2 style="font-size:18px; margin:0;">Your tests</h2>
+      <a href="create-test.html" class="btn btn-primary btn-sm">+ New test</a>
+    </div>
+    <div class="stack" id="instructor-test-list"></div>
+  </section>
+
+  <!-- STUDENT VIEW -->
+  <section id="student-view" hidden>
+    <h2 style="font-size:18px;">Available tests</h2>
+    <div class="stack" id="available-test-list" style="margin-bottom:40px;"></div>
+
+    <h2 style="font-size:18px;">Your results</h2>
+    <div class="stack" id="my-results-list"></div>
+  </section>
+
+</main>
+
+<script src="js/app.js"></script>
+</body>
+</html>
