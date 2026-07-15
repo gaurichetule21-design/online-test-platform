@@ -1,0 +1,19 @@
+# Root dependencies
+node_modules/
+
+# Backend dependencies
+backend/node_modules/
+
+# Environment variables
+.env
+backend/.env
+
+# Build output
+dist/
+build/
+
+# Logs
+*.log
+
+# VS Code
+.vscode/

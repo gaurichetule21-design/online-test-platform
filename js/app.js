@@ -39,7 +39,8 @@ const API = {
     return [
       { id: "t1", title: "JavaScript Fundamentals", questions: 12, status: "published", attempts: 34, avgScore: 78 },
       { id: "t2", title: "World History — Unit 3", questions: 20, status: "published", attempts: 51, avgScore: 65 },
-      { id: "t3", title: "React Hooks Checkpoint", questions: 15, status: "published", attempts: 19, avgScore: 82 },
+      { id: "t3", title: "Cell Biology Quiz", questions: 8, status: "draft", attempts: 0, avgScore: null },
+      { id: "t4", title: "React Hooks Checkpoint", questions: 15, status: "published", attempts: 19, avgScore: 82 },
     ];
   },
 
@@ -187,7 +188,7 @@ function initDashboardPage() {
         </div>
         <div class="cluster">
           <button class="btn btn-secondary btn-sm">Edit</button>
-          <button class="btn btn-ghost btn-sm">View results</button>
+          <a class="btn btn-ghost btn-sm" href="result.html?attempt=${t.id}">View results</a>
         </div>
       </div>
     `).join("");
